@@ -1,0 +1,350 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Open+Sans&display=swap');
+body {
+  background-color: #3457e387;
+
+  font-family: 'Montserrat';
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+}
+.wrapper {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  height: 500px;
+  /* overflow-x: auto; */
+  padding: 10px 30px;
+  /* max-width: 100%; */
+  width: 500px;
+  /* max-width: 400px; */
+  
+  background-color: #fff;
+  /* padding: 20px 35px; */
+  border-radius: 5px;
+  overflow-y: auto;
+  position: relative;
+  border-top: 7px solid #00b4c0;
+  margin: 10px 10px;
+}
+
+.title {
+  font-size: 25px;
+  color: royalblue;
+  font-weight: 500;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-family: 'open-sans';
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  /* background-color: royalblue; */
+  background-color: #e6543d;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  /* background-color: royalblue; */
+  background-color: #e6543d;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 29px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 24px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+select:focus {
+  border-color: blue;
+}
+
+html body form fieldset#custom div.select[data-multiple] div.header {
+  display: none;
+}
+
+html body form fieldset#custom div.select div.header {
+  content: '↓';
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  width: auto;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: inherit;
+  border-color: inherit;
+  border-radius: inherit;
+}
+
+html body form fieldset#custom div.select div.header::after {
+  content: '↓';
+  align-self: stretch;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+html body form fieldset#custom div.select div.header:hover::after {
+  background-color: blue;
+}
+
+.select .header select {
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border-width: 0;
+  width: 100%;
+  flex: 1;
+  display: none;
+}
+
+.select .header select optgroup {
+  display: none;
+}
+
+.select select div.option {
+  display: none;
+}
+
+html body form fieldset#custom div.select {
+  user-select: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0;
+  border-color: gray;
+  width: auto;
+  display: inline-block;
+}
+
+html body form fieldset#custom div.select:focus,
+html body form fieldset#custom div.select:hover {
+  border-color: blue;
+}
+
+html body form fieldset#custom div.select[data-open] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html body form fieldset#custom div.select[data-open] datalist {
+  display: initial;
+}
+
+html body form fieldset#custom div.select datalist {
+  appearance: none;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  left: 0;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+html body form fieldset#custom div.select datalist div.option {
+  background-color: white;
+  margin-bottom: 1px;
+  cursor: pointer;
+  padding: 0.5em;
+  border-width: 0;
+}
+
+html body form fieldset#custom div.select datalist div.option:hover,
+html body form fieldset#custom div.select datalist div.option:focus,
+html body form fieldset#custom div.select datalist div.option:checked {
+  background-color: blue;
+  color: white;
+}
+
+html
+  body
+  form
+  fieldset#custom
+  div.select
+  div.optgroup
+  div.option[data-disabled] {
+  color: gray;
+}
+
+html
+  body
+  form
+  fieldset#custom
+  div.select
+  div.optgroup
+  div.option[data-checked] {
+  background-color: blue;
+  color: white;
+}
+
+html body form fieldset#custom div.select div.optgroup div.label {
+  font-weight: bold;
+}
+
+html body form fieldset#custom div.select div.optgroup div.option div.label {
+  font-weight: normal;
+  padding: 0.25em;
+}
+
+html body form fieldset#custom div.select div.header span {
+  flex: 1;
+  padding: 0.5em;
+}
+select {
+  height: 45px;
+  background-color: #eee;
+  border-radius: 12px;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  color: gray;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+fieldset {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+.inputt {
+  width: 91%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    width: 390px !important;
+  }
+}
